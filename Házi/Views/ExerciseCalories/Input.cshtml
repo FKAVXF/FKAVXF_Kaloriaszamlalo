@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Input";
+}
+
+
+<h2 style="padding-bottom:1em;font-size:xx-large">Számold ki mennyi kalóriát égetsz!</h2>
+
+@if (TempData.ContainsKey("myWarning"))
+{
+    <p style="font-weight:bold;color:red">@TempData["myWarning"]</p>
+}
+
+<form method="post" action="/ExerciseCalories/Input">
+    <table border="0">
+        <tr> <td><p style="font-weight:bold">Sportoló neve</p></td> <td><input type="text" name="Name"/></td> </tr>
+        <tr><td><p></p></td></tr>
+        <tr> <td><p style="font-weight:bold">Sportoló tömege</p></td> <td><input type="text" name="Weight" /></td> </tr>
+        <tr><td><p></p></td></tr>
+        <tr>
+            <td><p style="font-weight:bold">Gyakorlat</p></td>
+            <td>
+                <select name="Exercise">
+                    <option>futás</option>
+                    <option>jóga</option>
+                    <option>pilátesz</option>
+                    <option>túrázás</option>
+                    <option>úszás</option>
+                    <option>biciklizés</option>
+                </select>
+            </td>
+        </tr>
+        <tr><td><p></p></td></tr>
+        <tr> <td><p style="font-weight:bold">Gyakorlat hossza (perc)</p></td> <td><input type="text" name="ExerciseLength" /></td> </tr>
+        <tr><td><p></p></td></tr>
+    </table>
+
+    <input type="submit" style="color: white ; background-color: green; font-weight:bold ; margin : 10px; padding : 10px ; border-radius:5px" value="Kiszámol"/>
+</form>
+

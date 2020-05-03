@@ -1,0 +1,46 @@
+﻿@model Házi.Models.Outputs
+@{
+    ViewBag.Title = "Outputs";
+}
+
+<h2 style="margin-bottom:40px; font-size:xx-large">Az eredmény</h2>
+
+
+<table>
+    <tr>
+        <td>
+            <p style="font-weight:bold">Sportoló neve </p> 
+        </td>
+        <td> 
+            <p>@Model.Name</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p style="font-weight:bold">Sportoló tömege </p>
+        </td>
+        <td>
+            <p>@Model.Weight</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p style="font-weight:bold">Gyakorlat hossza (perc) </p>
+        </td>
+        <td>
+            <p>@Model.ExerciseLength</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p style="font-weight:bold">Elégetett kalória </p>
+        </td>
+        <td>
+            <p>@Model.BurntCalories</p>
+        </td>
+    </tr>
+</table>
+ 
+ 
+ 
+ 
